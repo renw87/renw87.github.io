@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏州4天旅行攻略 - 8月21日出发</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .weather-card {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+        }
+
+        .day-title {
+            font-size: 1.4rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .day-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .attraction-details {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .attraction-price {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .map-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .map-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .tips-list li:before {
+            content: "💡";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .tips-list li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .attractions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>苏州4天旅行攻略</h1>
+            <p>8月21日出发 · 精致园林之旅</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🌤️ 出行天气</h2>
+            <div class="weather-grid">
+                <div class="weather-card">
+                    <div style="font-weight: bold; margin-bottom: 10px;">8月21日 (周四)</div>
+                    <div style="font-size: 1.5rem; margin-bottom: 5px;">32°C / 25°C</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">小雨转大雨</div>
+                </div>
+                <div class="weather-card">
+                    <div style="font-weight: bold; margin-bottom: 10px;">8月22日 (周五)</div>
+                    <div style="font-size: 1.5rem; margin-bottom: 5px;">26°C / 22°C</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">暴雨转大雨</div>
+                </div>
+                <div class="weather-card">
+                    <div style="font-weight: bold; margin-bottom: 10px;">8月23日 (周六)</div>
+                    <div style="font-size: 1.5rem; margin-bottom: 5px;">28°C / 24°C</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">多云</div>
+                </div>
+                <div class="weather-card">
+                    <div style="font-weight: bold; margin-bottom: 10px;">8月24日 (周日)</div>
+                    <div style="font-size: 1.5rem; margin-bottom: 5px;">32°C / 27°C</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">多云</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🗺️ 行程规划</h2>
+            
+            <div class="day-card">
+                <div class="day-title">
+                    <div class="day-number">1</div>
+                    第一天：古典园林精华游
+                </div>
+                <p style="color: #666; margin-bottom: 15px;">建议游览时间：8小时 | 景点间距离较近，可步行或打车</p>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/3e171ede478d6814f9d4469dcb1a9ae1" alt="拙政园" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">拙政园</div>
+                            <div class="attraction-details">
+                                地址：东北街178号<br>
+                                开放时间：07:30-17:30<br>
+                                门票：90元<br>
+                                推荐游览：2-3小时
+                            </div>
+                            <div class="attraction-price">💰 门票：90元</div>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/aced2ad6e6cebff9f83132f53195b0a5" alt="苏州博物馆" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">苏州博物馆</div>
+                            <div class="attraction-details">
+                                地址：东北街204号<br>
+                                开放时间：09:00-17:00<br>
+                                门票：免费（需预约）<br>
+                                推荐游览：1-2小时
+                            </div>
+                            <div class="attraction-price">💰 门票：免费</div>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/392c0cfd704012a9e49c534b960d81a9" alt="狮子林" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">狮子林</div>
+                            <div class="attraction-details">
+                                地址：园林路23号<br>
+                                开放时间：07:30-17:00<br>
+                                门票：38元<br>
+                                推荐游览：1-2小时
+                            </div>
+                            <div class="attraction-price">💰 门票：38元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">
+                    <div class="day-number">2</div>
+                    第二天：虎丘留园深度游
+                </div>
+                <p style="color: #666; margin-bottom: 15px;">建议游览时间：6小时 | 景点间距离适中，建议打车</p>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/111735141e7df5df834172fe6dec5e78" alt="虎丘山风景区" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">虎丘山风景区</div>
+                            <div class="attraction-details">
+                                地址：虎丘山门内8号<br>
+                                开放时间：07:30-18:00<br>
+                                门票：80元<br>
+                                推荐游览：2-3小时
+                            </div>
+                            <div class="attraction-price">💰 门票：80元</div>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/9a023735af5bae8759d1ad0ddeaf45d3" alt="留园" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">留园</div>
+                            <div class="attraction-details">
+                                地址：阊门外留园路338号<br>
+                                开放时间：07:30-17:30<br>
+                                门票：45元<br>
+                                推荐游览：2-3小时
+                            </div>
+                            <div class="attraction-price">💰 门票：45元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">
+                    <div class="day-number">3</div>
+                    第三天：寒山寺网师园文化游
+                </div>
+                <p style="color: #666; margin-bottom: 15px;">建议游览时间：5小时 | 景点间距离较远，建议打车</p>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/ab02d6e508f2e4e59213947d3d0034cd" alt="寒山寺" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">寒山寺</div>
+                            <div class="attraction-details">
+                                地址：寒山寺弄24号<br>
+                                开放时间：07:30-18:00<br>
+                                门票：20元<br>
+                                推荐游览：1-2小时
+                            </div>
+                            <div class="attraction-price">💰 门票：20元</div>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/b9bec5c0095bb4ca969d8e0236573c4e" alt="网师园" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">网师园</div>
+                            <div class="attraction-details">
+                                地址：带城桥路阔家头巷11号<br>
+                                开放时间：07:30-17:30<br>
+                                门票：20元<br>
+                                推荐游览：1-2小时
+                            </div>
+                            <div class="attraction-price">💰 门票：20元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">
+                    <div class="day-number">4</div>
+                    第四天：周庄古镇水乡游
+                </div>
+                <p style="color: #666; margin-bottom: 15px;">建议游览时间：6小时 | 距离市区较远，建议包车或专线</p>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <img src="http://store.is.autonavi.com/showpic/c25463f31b94e681d96182971e40d73d" alt="周庄古镇" class="attraction-image">
+                        <div class="attraction-info">
+                            <div class="attraction-name">周庄古镇</div>
+                            <div class="attraction-details">
+                                地址：周庄镇全福路43号<br>
+                                开放时间：08:00-20:00<br>
+                                门票：100元<br>
+                                推荐游览：4-6小时
+                            </div>
+                            <div class="attraction-price">💰 门票：100元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🗺️ 高德地图行程规划</h2>
+            <div style="text-align: center;">
+                <a href="amapuri://workInAmap/createWithToken?polymericId=mcp_8092289cd470492e8544d21327bae5f2&from=MCP" class="map-button">
+                    📱 在高德地图中查看完整行程
+                </a>
+                <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                    点击按钮可在高德地图APP中查看详细的路线规划和导航信息
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💡 旅行贴士</h2>
+            <ul class="tips-list">
+                <li>建议提前在网上预订景点门票，避免排队</li>
+                <li>8月天气多变，请携带雨具和防晒用品</li>
+                <li>景区内消费较高，建议在景区外用餐</li>
+                <li>苏州园林游览建议请导游讲解，了解更多历史文化</li>
+                <li>周庄古镇建议住一晚，体验水乡夜景</li>
+                <li>打车建议使用滴滴或高德地图，避免被宰</li>
+                <li>准备现金和移动支付，部分小店只收现金</li>
+                <li>建议携带身份证，部分景点需要实名制购票</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 添加页面滚动动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.attraction-card, .day-card, .weather-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+
+        // 添加地图按钮点击事件
+        document.querySelector('.map-button').addEventListener('click', function(e) {
+            // 在移动端直接打开高德地图APP
+            if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                // 移动端直接使用链接
+                return;
+            } else {
+                // 桌面端显示提示
+                alert('请在移动设备上点击此按钮以打开高德地图APP');
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html> 
