@@ -146,6 +146,65 @@
             color: #888;
         }
 
+        .booking-info {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 8px 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(255, 107, 107, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .booking-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .booking-channel {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin: 8px 0;
+            display: block;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .booking-channel:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .booking-channel strong {
+            font-weight: bold;
+            margin-right: 8px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .no-booking {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 8px 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(78, 205, 196, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .no-booking:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+        }
+
         .kid-friendly {
             background: #e8f5e8;
             border-radius: 8px;
@@ -166,6 +225,131 @@
         .rest-time h4 {
             color: #f57c00;
             margin-bottom: 8px;
+        }
+
+        .train-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .train-info::before {
+            content: "🚄";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: trainMove 3s ease-in-out infinite;
+        }
+
+        @keyframes trainMove {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+        }
+
+        .train-info h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .train-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            background: rgba(255,255,255,0.95);
+            padding: 18px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .timeline-time {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .timeline-time::before {
+            content: "⏰";
+            font-size: 1.1rem;
+        }
+
+        .timeline-desc {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .train-station {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+        }
+
+        .train-duration {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            box-shadow: 0 2px 6px rgba(78, 205, 196, 0.3);
+        }
+
+        .train-price {
+            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            box-shadow: 0 2px 6px rgba(254, 202, 87, 0.3);
         }
 
         .transport-info {
@@ -295,7 +479,7 @@
             <div class="info-grid">
                 <div class="info-item">
                     <h3>出发日期</h3>
-                    <p>8月21日 (周三)</p>
+                    <p>8月21日 (周四)</p>
                 </div>
                 <div class="info-item">
                     <h3>行程天数</h3>
@@ -310,79 +494,159 @@
                     <p>轻松不废腿，互动体验多</p>
                 </div>
             </div>
+            <div class="train-info">
+                <h4>🚄 高铁出行信息</h4>
+                <div class="train-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">去程 · 8月21日</div>
+                        <div class="timeline-desc">
+                            <span class="train-station">D2913</span>
+                            <span class="train-station">青岛北站 08:06</span>
+                            <span class="train-station">苏州站 13:00</span>
+                            <span class="train-duration">历时5小时</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">返程 · 8月24日</div>
+                        <div class="timeline-desc">
+                            <span class="train-station">D2914</span>
+                            <span class="train-station">苏州站 15:34</span>
+                            <span class="train-station">青岛北站 20:42</span>
+                            <span class="train-duration">历时5小时</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">票价信息</div>
+                        <div class="timeline-desc">
+                            <span class="train-price">二等座 289元/人</span>
+                            <span class="train-price">一等座 463元/人</span>
+                            <span class="train-price">商务座 867元/人</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Day 1 -->
         <div class="day-section">
             <h2 class="day-title">Day 1 - 轻松抵达，初探古城</h2>
+            <div class="train-info">
+                <h4>🚄 到达信息</h4>
+                <div class="train-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:06</div>
+                        <div class="timeline-desc">
+                            <span class="train-station">D2913</span>
+                            <span class="train-station">青岛北站出发</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">13:00</div>
+                        <div class="timeline-desc">
+                            <span class="train-station">苏州站到达</span>
+                            <span class="train-duration">办理入住</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">13:30-15:00</div>
+                        <div class="timeline-desc">
+                            <span class="train-duration">午餐休息</span>
+                            <span class="train-duration">准备下午行程</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="attractions-grid">
+                <div class="attraction-card" onclick="openAmapLocation('观前街', 31.3150, 120.6150)">
+                    <img src="http://store.is.autonavi.com/showpic/aced2ad6e6cebff9f83132f53195b0a5" alt="观前街" class="attraction-image">
+                    <div class="attraction-content">
+                        <h3 class="attraction-title">观前街商业区</h3>
+                        <p class="attraction-desc">现代化商业街，有商场、美食、购物，适合亲子休闲。</p>
+                        <div class="attraction-info">
+                            <span>⏰ 15:00-17:00</span>
+                            <span>🎫 免费</span>
+                            <span class="no-booking">无需预约</span>
+                        </div>
+                        <div class="kid-friendly">👶 有空调商场，小吃丰富</div>
+                    </div>
+                </div>
                 <div class="attraction-card" onclick="openAmapLocation('平江路', 31.3190, 120.6290)">
                     <img src="http://store.is.autonavi.com/showpic/3e171ede478d6814f9d4469dcb1a9ae1" alt="平江路" class="attraction-image">
                     <div class="attraction-content">
                         <h3 class="attraction-title">平江路历史街区</h3>
                         <p class="attraction-desc">感受苏州古城风貌，体验江南水乡的独特魅力，漫步在青石板路上。</p>
                         <div class="attraction-info">
-                            <span>⏰ 15:00-18:00</span>
+                            <span>⏰ 17:00-19:30</span>
                             <span>🎫 免费</span>
+                            <span class="no-booking">无需预约</span>
                         </div>
-                        <div class="kid-friendly">👶 可以坐人力车，体验古街风情</div>
-                    </div>
-                </div>
-                <div class="attraction-card" onclick="openAmapLocation('山塘街', 31.3150, 120.6150)">
-                    <img src="http://store.is.autonavi.com/showpic/aced2ad6e6cebff9f83132f53195b0a5" alt="山塘街" class="attraction-image">
-                    <div class="attraction-content">
-                        <h3 class="attraction-title">山塘街夜景</h3>
-                        <p class="attraction-desc">夜游山塘街，体验江南水乡夜景，品尝各种苏州小吃。</p>
-                        <div class="attraction-info">
-                            <span>⏰ 19:00-21:00</span>
-                            <span>🎫 免费</span>
-                        </div>
-                        <div class="kid-friendly">👶 夜景很美，小吃丰富</div>
+                        <div class="kid-friendly">👶 傍晚最美，可以坐人力车</div>
                     </div>
                 </div>
             </div>
             <div class="rest-time">
                 <h4>🌅 亲子休息时间</h4>
-                <p>建议在平江路和山塘街之间安排1小时休息，可以在茶馆喝杯茶，让孩子休息一下。</p>
+                <p>建议在观前街和平江路之间安排30分钟休息，可以在商场内休息，让孩子适应新环境。</p>
             </div>
             <div class="transport-info">
                 <h4>🚇 交通信息</h4>
-                <p>从苏州北站乘坐地铁1号线到相门站，步行至平江路。平江路到山塘街可乘坐公交或打车。</p>
+                <p>从苏州站乘坐地铁1号线到观前街站，观前街到平江路可步行或乘坐公交。</p>
             </div>
             <div class="rest-time">
                 <h4>🍜 美食推荐</h4>
-                <p><strong>午餐推荐：</strong>苏外婆·苏帮菜(平江路店) - 松鼠桂鱼、阳春面<br>
-                <strong>晚餐推荐：</strong>山塘街小吃 - 糖粥、桂花糖芋艿、小笼包<br>
+                <p><strong>午餐推荐：</strong>观前街美食广场 - 各种快餐和小吃<br>
+                <strong>晚餐推荐：</strong>平江路苏帮菜 - 松鼠桂鱼、阳春面<br>
                 <strong>特色小吃：</strong>同兴记小笼、蟹上黄蟹黄面、姑苏家宴</p>
             </div>
         </div>
 
         <!-- Day 2 -->
         <div class="day-section">
-            <h2 class="day-title">Day 2 - 园林精华游</h2>
+            <h2 class="day-title">Day 2 - 园林文化精华游</h2>
             <div class="attractions-grid">
-                <div class="attraction-card" onclick="openAmapLocation('拙政园', 31.2980, 120.6290)">
-                    <img src="http://store.is.autonavi.com/showpic/3e171ede478d6814f9d4469dcb1a9ae1" alt="拙政园" class="attraction-image">
-                    <div class="attraction-content">
-                        <h3 class="attraction-title">拙政园</h3>
-                        <p class="attraction-desc">苏州园林之首，世界文化遗产，以水景为主，建筑精美。</p>
-                        <div class="attraction-info">
-                            <span>⏰ 09:00-11:30</span>
-                            <span>🎫 90元</span>
-                        </div>
-                        <div class="kid-friendly">👶 可以喂鱼，拍照打卡</div>
-                    </div>
-                </div>
                 <div class="attraction-card" onclick="openAmapLocation('苏州博物馆', 31.2980, 120.6290)">
                     <img src="http://store.is.autonavi.com/showpic/aced2ad6e6cebff9f83132f53195b0a5" alt="苏州博物馆" class="attraction-image">
                     <div class="attraction-content">
                         <h3 class="attraction-title">苏州博物馆</h3>
                         <p class="attraction-desc">贝聿铭设计，免费参观，了解苏州历史文化。</p>
                         <div class="attraction-info">
-                            <span>⏰ 14:00-16:00</span>
+                            <span>⏰ 09:00-11:30</span>
                             <span>🎫 免费</span>
+                            <span class="booking-info">需提前7天预约</span>
+                        </div>
+                        <div class="booking-channel">
+                            <strong>预约渠道：</strong>苏州博物馆官网、微信公众号"苏州博物馆"
                         </div>
                         <div class="kid-friendly">👶 有互动展区，空调舒适</div>
+                    </div>
+                </div>
+                <div class="attraction-card" onclick="openAmapLocation('拙政园', 31.2980, 120.6290)">
+                    <img src="http://store.is.autonavi.com/showpic/3e171ede478d6814f9d4469dcb1a9ae1" alt="拙政园" class="attraction-image">
+                    <div class="attraction-content">
+                        <h3 class="attraction-title">拙政园</h3>
+                        <p class="attraction-desc">苏州园林之首，世界文化遗产，以水景为主，建筑精美。</p>
+                        <div class="attraction-info">
+                            <span>⏰ 14:00-16:00</span>
+                            <span>🎫 90元</span>
+                            <span class="booking-info">需提前1天预约</span>
+                        </div>
+                        <div class="booking-channel">
+                            <strong>预约渠道：</strong>拙政园官网、微信公众号"苏州园林"
+                        </div>
+                        <div class="kid-friendly">👶 可以喂鱼，拍照打卡</div>
+                    </div>
+                </div>
+                <div class="attraction-card" onclick="openAmapLocation('狮子林', 31.2980, 120.6290)">
+                    <img src="http://store.is.autonavi.com/showpic/c25463f31b94e681d96182971e40d73d" alt="狮子林" class="attraction-image">
+                    <div class="attraction-content">
+                        <h3 class="attraction-title">狮子林</h3>
+                        <p class="attraction-desc">迷宫式园林，以假山著称，孩子可以玩捉迷藏游戏。</p>
+                        <div class="attraction-info">
+                            <span>⏰ 16:00-18:00</span>
+                            <span>🎫 45元</span>
+                            <span class="no-booking">无需预约</span>
+                        </div>
+                        <div class="kid-friendly">👶 迷宫有趣，互动性强</div>
                     </div>
                 </div>
             </div>
@@ -392,12 +656,12 @@
             </div>
             <div class="transport-info">
                 <h4>🚇 交通信息</h4>
-                <p>拙政园到苏州博物馆步行即可，距离很近。</p>
+                <p>苏州博物馆到拙政园步行即可，距离很近。拙政园到狮子林可步行或打车。</p>
             </div>
             <div class="rest-time">
                 <h4>🍜 美食推荐</h4>
                 <p><strong>午餐推荐：</strong>苏满楼菜馆 - 苏帮菜、松鼠桂鱼<br>
-                <strong>下午茶：</strong>博物馆附近茶馆 - 碧螺春茶、茶点<br>
+                <strong>下午茶：</strong>拙政园附近茶馆 - 碧螺春茶、茶点<br>
                 <strong>特色推荐：</strong>十全街美食 - 苏祥兴蟹黄面、乾苏铁棍馄饨</p>
             </div>
         </div>
@@ -414,6 +678,7 @@
                         <div class="attraction-info">
                             <span>⏰ 09:00-15:00</span>
                             <span>🎫 100元</span>
+                            <span class="no-booking">无需预约</span>
                         </div>
                         <div class="kid-friendly">👶 可以坐船，体验水乡生活</div>
                     </div>
@@ -433,6 +698,65 @@
                 <strong>特色小吃：</strong>沈万酥蹄、周庄小笼包、阿婆茶<br>
                 <strong>晚餐推荐：</strong>农家特色土菜馆 - 水乡特色菜</p>
             </div>
+            
+            <!-- Day 3 备选方案 -->
+            <div class="train-info">
+                <h4>🔄 Day 3 备选方案</h4>
+                <div class="attractions-grid">
+                    <div class="attraction-card" onclick="openAmapLocation('金鸡湖景区', 31.3150, 120.7200)">
+                        <img src="http://store.is.autonavi.com/showpic/7c0932d199ea2c0e3409a4c4f5a19bbb" alt="金鸡湖景区" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">金鸡湖景区</h3>
+                            <p class="attraction-desc">现代化湖景，环湖步道漫步，月光码头拍照，孩子喜欢开阔空间。</p>
+                                                                            <div class="attraction-info">
+                            <span>⏰ 09:00-12:00</span>
+                            <span>🎫 免费</span>
+                            <span class="no-booking">无需预约</span>
+                        </div>
+                        <div class="kid-friendly">👶 可以喂鱼，拍照好看</div>
+                        </div>
+                    </div>
+                    <div class="attraction-card" onclick="openAmapLocation('东方之门', 31.3150, 120.7200)">
+                        <img src="http://store.is.autonavi.com/showpic/004cbc321f93b3b06bc1e749ce295bf1" alt="东方之门" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">东方之门观景台</h3>
+                            <p class="attraction-desc">苏州地标建筑，观景台俯瞰整个苏州城，现代化体验。</p>
+                                                                            <div class="attraction-info">
+                            <span>⏰ 14:00-16:00</span>
+                            <span>🎫 免费</span>
+                            <span class="no-booking">无需预约</span>
+                        </div>
+                        <div class="kid-friendly">👶 孩子喜欢高楼大厦</div>
+                        </div>
+                    </div>
+                    <div class="attraction-card" onclick="openAmapLocation('沧浪亭', 31.2980, 120.6290)">
+                        <img src="http://store.is.autonavi.com/showpic/17535937050f57a33639c524e3fda30d" alt="沧浪亭" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">沧浪亭</h3>
+                            <p class="attraction-desc">苏州最古老的园林，文化底蕴深厚，环境优美适合亲子。</p>
+                                                                            <div class="attraction-info">
+                            <span>⏰ 16:00-18:00</span>
+                            <span>🎫 20元</span>
+                            <span class="no-booking">无需预约</span>
+                        </div>
+                        <div class="kid-friendly">👶 园林故事性强</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="train-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:00-14:00</div>
+                        <div class="timeline-desc">圆融时代广场午餐休息</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rest-time">
+                <h4>💡 备选方案特色</h4>
+                <p><strong>金鸡湖：</strong>现代化湖景，孩子喜欢开阔空间<br>
+                <strong>东方之门：</strong>地标建筑，观景台俯瞰苏州<br>
+                <strong>沧浪亭：</strong>古典园林，文化底蕴深厚<br>
+                <strong>优势：</strong>交通便利，室内外结合，体验多样化</p>
+            </div>
         </div>
 
         <!-- Day 4 -->
@@ -447,6 +771,7 @@
                         <div class="attraction-info">
                             <span>⏰ 09:00-11:00</span>
                             <span>🎫 20元</span>
+                            <span class="no-booking">无需预约</span>
                         </div>
                         <div class="kid-friendly">👶 可以敲钟，体验传统文化</div>
                     </div>
@@ -457,8 +782,12 @@
                         <h3 class="attraction-title">虎丘</h3>
                         <p class="attraction-desc">吴王阖闾墓，斜塔奇观，苏州标志性景点。</p>
                         <div class="attraction-info">
-                            <span>⏰ 11:00-13:00</span>
+                            <span>⏰ 13:00-15:00</span>
                             <span>🎫 60元</span>
+                            <span class="booking-info">需提前1天预约</span>
+                        </div>
+                        <div class="booking-channel">
+                            <strong>预约渠道：</strong>虎丘官网、微信公众号"苏州虎丘"
                         </div>
                         <div class="kid-friendly">👶 有故事传说，拍照好看</div>
                     </div>
@@ -477,6 +806,32 @@
                 <p><strong>早餐推荐：</strong>寒山寺素面、素包子<br>
                 <strong>午餐推荐：</strong>虎丘附近 - 振华酒家、苏州一碗面<br>
                 <strong>特色推荐：</strong>惠珍妈妈苏式小吃、小陆羊肉</p>
+            </div>
+            <div class="train-info">
+                <h4>🚄 返程信息</h4>
+                <div class="train-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">14:00</div>
+                        <div class="timeline-desc">
+                            <span class="train-duration">返回酒店</span>
+                            <span class="train-duration">取行李</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">15:34</div>
+                        <div class="timeline-desc">
+                            <span class="train-station">D2914</span>
+                            <span class="train-station">苏州站出发</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">20:42</div>
+                        <div class="timeline-desc">
+                            <span class="train-station">青岛北站到达</span>
+                            <span class="train-duration">行程结束</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -525,6 +880,17 @@
                 <div class="tip-item">
                     <h4>⏰ 时间安排</h4>
                     <p>每天安排2-3个景点，中间有充足休息时间</p>
+                </div>
+                <div class="tip-item">
+                    <h4>🚄 高铁出行</h4>
+                    <p>提前15天购票，准备身份证，建议购买保险，带好充电宝和零食</p>
+                </div>
+                <div class="tip-item">
+                    <h4>📅 预约提醒</h4>
+                    <p><strong>苏州博物馆：</strong>需提前7天预约，官网或微信公众号"苏州博物馆"<br>
+                    <strong>拙政园：</strong>需提前1天预约，官网或微信公众号"苏州园林"<br>
+                    <strong>虎丘：</strong>需提前1天预约，官网或微信公众号"苏州虎丘"<br>
+                    <strong>其他景点：</strong>无需预约，可直接前往</p>
                 </div>
             </div>
         </div>
